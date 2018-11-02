@@ -1,0 +1,68 @@
+utils.loadPlatform("ti.platforms.evmDM6437")
+utils.importFile("C:/dvsdk_1_01_00_15/examples/common/evmDM6437/common.tci");
+
+/* The following DSP/BIOS Features are enabled.  */
+bios.enableMemoryHeaps(prog)
+bios.enableRealTimeAnalysis(prog)
+bios.enableRtdx(prog)
+bios.enableTskManager(prog)
+
+bios.MEM.instance("DDR2").createHeap = 1
+bios.MEM.BIOSOBJSEG = prog.get("DDR2")
+bios.MEM.MALLOCSEG = prog.get("DDR2")
+bios.TSK.create("TSK_video_loopback")
+bios.TSK.instance("TSK_video_loopback").order = 1
+bios.TSK.instance("TSK_video_loopback").fxn = prog.extern("processing_task")
+bios.TSK.instance("TSK_video_loopback").stackSize = 16384
+
+/* Create semaphores for Transmit/Receive: */
+bios.SEM.create("semRx")
+bios.SEM.create("semTx")
+
+/* Enable the GIO module: */
+bios.GIO.ENABLEGIO = 1
+
+/* PSP configuration */
+
+/* Create user device for I2C needed by audio drivers */
+bios.UDEV.create("I2C0")
+bios.UDEV.instance("I2C0").fxnTableType = "IOM_Fxns"
+bios.UDEV.instance("I2C0").params = prog.extern("I2C_devParams")
+bios.UDEV.instance("I2C0").fxnTable = prog.extern("I2CMD_FXNS")
+
+/* udevCodec (For AIC with McBSP) */
+bios.UDEV.create("udevCodec")
+bios.UDEV.instance("udevCodec").fxnTableType = "IOM_Fxns"
+bios.UDEV.instance("udevCodec").fxnTable = prog.extern("EVMDM6437_EDMA_AIC33_FXNS")
+bios.UDEV.instance("udevCodec").initFxn = prog.extern("EVMDM6437_EDMA_AIC33_init0")
+bios.UDEV.instance("udevCodec").params = null
+bios.UDEV.instance("udevCodec").deviceId = 0
+bios.UDEV.instance("udevCodec").deviceGlobalDataPtr = null
+
+/* Capture Driver */
+bios.UDEV.create("VPFE0");
+bios.UDEV.instance("VPFE0").fxnTable = prog.extern("VPFEMD_FXNS");
+bios.UDEV.instance("VPFE0").fxnTableType = "IOM_Fxns";
+
+/* Display Driver */
+bios.UDEV.create("VPBE0");
+bios.UDEV.instance("VPBE0").fxnTable = prog.extern("VPBEMD_FXNS");
+bios.UDEV.instance("VPBE0").fxnTableType = "IOM_Fxns";
+
+/* Enable ECM Handler */
+bios.ECM.ENABLE = 1
+
+/* ECM configuration - manually Reflect these settings in soc.h */
+bios.HWI.instance("HWI_INT7").interruptSelectNumber = 0
+bios.HWI.instance("HWI_INT8").interruptSelectNumber = 1
+bios.HWI.instance("HWI_INT9").interruptSelectNumber = 2
+bios.HWI.instance("HWI_INT10").interruptSelectNumber = 3
+bios.MEM.STACKSIZE = 0x1000
+bios.MEM.TEXTSEG = prog.get("DDR2");
+bios.CLK.TIMERSELECT = "Timer 0";
+bios.CLK.RESETTIMER = 1;
+
+// !GRAPHICAL_CONFIG_TOOL_SCRIPT_INSERT_POINT!
+
+prog.gen()
+

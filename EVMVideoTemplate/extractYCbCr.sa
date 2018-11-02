@@ -1,0 +1,97 @@
+; ----------------------------------------------------------------------------
+; Function : extractYCbCr.sa
+; Author   : Pierre BRESSY
+; Creation : 23/05/2012
+;
+; Purpose  : Extract Y, Cb and Cr from mixed buffer
+;
+; Input parameters
+;
+; DSTY   : pointer on memory area to receive Y buffer
+; DSTCB  : pointer on memory area to receive Cb buffer
+; DSTCR  : pointer on memory area to receive Cr buffer
+; SRC	 : pointer on memroy area to extract
+; WIDTH  : width of image (ex:720)
+; HEIGHT : height of image (ex:576)
+;
+; Output parameters 
+;
+; none
+;
+; ----------------------------------------------------------------------------
+
+		.global _extractYCbCr
+
+_extractYCbCr: .cproc SRC, DSTY, DSTCB, DSTCR, WIDTH, HEIGHT
+
+;	.mdep
+
+	; variable declaration as register in function
+
+	.reg TOTAL_SIZE
+	.reg INDEX
+
+	.reg PTR_IMG_Y
+	.reg PTR_IMG_CB
+	.reg PTR_IMG_CR
+	.reg PTR_IMG_SRC
+
+	.reg PTR_IMG
+	.reg DATA1
+	.reg DATA2
+	.reg DATA3
+
+
+	; copy input values in declared working registers
+	MV SRC,PTR_IMG_SRC
+	MV DSTY,PTR_IMG_Y
+	MV DSTCB,PTR_IMG_CB
+	MV DSTCR,PTR_IMG_CR
+
+	; compute total_size : total_size=width*heigth
+	MPY	.M1X	HEIGHT, WIDTH, TOTAL_SIZE
+	; divide total_size by 4 due to processing 8 bytes for 4 pixels
+	SHRU TOTAL_SIZE,2,TOTAL_SIZE
+ 	SUB TOTAL_SIZE,2,TOTAL_SIZE
+	; loop on index
+	MV 	TOTAL_SIZE,INDEX
+
+loop_index: ;.trip 1024,1024
+
+	LDW *PTR_IMG_SRC++, DATA1
+	LDW *PTR_IMG_SRC++, DATA2
+	PACKH4 DATA2, DATA1, DATA3
+	STW DATA3,*PTR_IMG_Y++
+
+	BDEC	loop_index,INDEX
+ 
+	.endproc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,104 @@
+; ----------------------------------------------------------------------------
+; Function : y_cb_cr_to_ycbcr
+; Author   : Pierre BRESSY
+; Creation : 28/09/2010
+;
+; Purpose  : merge 3 buffers Y, Cb, Cr into 1 buffer UYUV
+;
+; Input parameters
+;
+; SRCY   : pointer on memory area containing Y buffer
+; SRCCB  : pointer on memory area containing Cb buffer
+; SRCCR  : pointer on memory area containing Cr buffer
+; DST	 : pointer on memroy area to fill
+; WIDTH  : width of image (ex:720)
+; HEIGHT : height of image (ex:576)
+;
+; Output parameters 
+;
+; none
+;
+; ----------------------------------------------------------------------------
+
+		.global _y_cb_cr_to_ycbcr
+
+_y_cb_cr_to_ycbcr: .cproc SRCY, SRCCB, SRCCR , DST, WIDTH, HEIGHT
+
+;	.mdep
+
+	; variable declaration as register in function
+
+	.reg TOTAL_SIZE
+	.reg INDEX
+
+	.reg PTR_IMG_Y
+	.reg PTR_IMG_CB
+	.reg PTR_IMG_CR
+	.reg PTR_IMG_DST
+
+	.reg PTR_IMG
+	.reg DATA
+
+
+	; copy input values in declared working registers
+	MV SRCY,PTR_IMG_Y
+	MV SRCCB,PTR_IMG_CB
+	MV SRCCR,PTR_IMG_CR
+	MV DST,PTR_IMG_DST
+
+	; compute total_size : total_size=width*heigth
+	MPY	.M1X	HEIGHT, WIDTH, TOTAL_SIZE
+	; divide total_size by 2 due to processing 4 bytes for 2 pixels
+	SHRU TOTAL_SIZE,1,TOTAL_SIZE
+ 	SUB TOTAL_SIZE,2,TOTAL_SIZE
+	; loop on index
+	MV 	TOTAL_SIZE,INDEX
+
+loop_index: ;.trip 1024,1024
+
+
+	LDB	*PTR_IMG_CB++,DATA
+	STB	DATA,*PTR_IMG_DST++
+
+	LDB	*PTR_IMG_Y++,DATA
+	STB	DATA,*PTR_IMG_DST++
+
+	LDB	*PTR_IMG_CR++,DATA
+	STB	DATA,*PTR_IMG_DST++
+
+	LDB	*PTR_IMG_Y++,DATA
+	STB	DATA,*PTR_IMG_DST++
+
+
+	BDEC	loop_index,INDEX
+ 
+	.endproc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

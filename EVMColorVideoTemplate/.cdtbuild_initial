@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fileVersion 3.1.0?>
+
+<ManagedProjectBuildInfo>
+<project id="TemplateVideoLoopback.com.ti.ccstudio.buildDefinitions.C6000.ProjectType.712253236" name="C6000" projectType="com.ti.ccstudio.buildDefinitions.C6000.ProjectType">
+<configuration artifactExtension="out" artifactName="TemplateVideoLoopback" description="" id="com.ti.ccstudio.buildDefinitions.C6000.Debug.1153397313" name="Debug" parent="com.ti.ccstudio.buildDefinitions.C6000.Debug">
+<toolChain id="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.DebugToolchain.1351017147" name="TI Code Generation Tools" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.DebugToolchain" targetTool="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.linkerDebug.1174021742">
+<option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.1513593448" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+<listOptionValue builtIn="false" value="DEVICE_CONFIGURATION_ID=TMS320C64XX.TMS320DM6437"/>
+<listOptionValue builtIn="false" value="DEVICE_ENDIANNESS=little"/>
+<listOptionValue builtIn="false" value="OUTPUT_FORMAT=COFF"/>
+<listOptionValue builtIn="false" value="CCS_MBS_VERSION=4.2.2"/>
+<listOptionValue builtIn="false" value="LINKER_COMMAND_FILE="/>
+<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=libc.a"/>
+<listOptionValue builtIn="false" value="DSPBIOS_VERSION=5.41.10.36"/>
+<listOptionValue builtIn="false" value="OUTPUT_TYPE=executable"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1293575171" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="7.2.0" valueType="string"/>
+<tool id="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.compilerDebug.1931545304" name="C6000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.compilerDebug">
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.DIAG_WARNING.1930010883" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.DIAG_WARNING" valueType="stringList">
+<listOptionValue builtIn="false" value="225"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.SILICON_VERSION.1448308655" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.SILICON_VERSION" value="64+" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.INCLUDE_PATH.599572424" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.INCLUDE_PATH" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;..\..\CommonLib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\examples\common\evmDM6437&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\CCStudio_v3.3\EVMDM6437\boards\evmdm6437_v2\include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\soc\dm6437\dsp\inc&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\inc&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${TCONF_OUTPUT_DIR}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${BIOS_INCLUDE_DIR}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${RTDX_INCLUDE_DIR}&quot;"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.ABI.1485709485" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.ABI" value="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.ABI.coffabi" valueType="enumerated"/>
+</tool>
+<tool id="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.linkerDebug.1174021742" name="C6000 Linker" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.linkerDebug">
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.STACK_SIZE.1760142765" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.STACK_SIZE" value="800" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.HEAP_SIZE.1195290109" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.HEAP_SIZE" value="800" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.OUTPUT_FILE.861461838" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.OUTPUT_FILE" value="&quot;TemplateVideoLoopback.out&quot;" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.MAP_FILE.1716013492" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.MAP_FILE" value="&quot;TemplateVideoLoopback.map&quot;" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.SEARCH_PATH.430948975" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.SEARCH_PATH" valueType="stringList">
+<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${RTDX_LIB_DIR}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${BIOS_LIB_DIR}&quot;"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.LIBRARY.536836699" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.LIBRARY" valueType="libs">
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\palos_bios.lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\i2c_bios_drv.lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\mcasp_bios_drv.lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\mcbsp_bios_drv.lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\audio_bios_drv.lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\audio_bios_drv.lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\edma3\lib\Debug\edma3_rm_bios.lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\edma3\lib\Debug\edma3_drv_bios.lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\edma3\lib\Debug\edma3_drv_sample.lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\CCStudio_v3.3\EVMDM6437\boards\evmdm6437_v2\lib\evmdm6437bsl.lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\prev_bios_drv.lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\video_bios_drv.lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\vpbe_bios_drv.lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\vpfe_bios_drv.lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\dvsdk_1_01_00_15\codec_engine_1_20_02\packages\ti\sdo\ce\osal\lib\osal_bios.a64P&quot;"/>
+<listOptionValue builtIn="false" value="&quot;libc.a&quot;"/>
+</option>
+</tool>
+<tool id="com.ti.rtsc.buildDefinitions.DSPBIOS_5.40.tool.1452599688" name="TConf Script Compiler" superClass="com.ti.rtsc.buildDefinitions.DSPBIOS_5.40.tool"/>
+<macros expandEnvironmentMacros="true"/>
+</toolChain>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.C6000.Debug.1153397313./TemplateVideoLoopbackSimplified/ycbcr_to_y_cb_cr.c" name="ycbcr_to_y_cb_cr.c" rcbsApplicability="disable" resourcePath="/TemplateVideoLoopbackSimplified/ycbcr_to_y_cb_cr.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.compilerDebug.1931545304./TemplateVideoLoopbackSimplified/ycbcr_to_y_cb_cr.c">
+<tool id="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.compilerDebug.1931545304./TemplateVideoLoopbackSimplified/ycbcr_to_y_cb_cr.c" name="C6000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.compilerDebug.1931545304">
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.OPT_LEVEL.728527103" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.OPT_LEVEL.3" valueType="enumerated"/>
+</tool>
+</resourceConfiguration>
+</configuration>
+<configuration artifactExtension="out" artifactName="TemplateVideoLoopback" description="" id="com.ti.ccstudio.buildDefinitions.C6000.Release.1208253288" name="Release" parent="com.ti.ccstudio.buildDefinitions.C6000.Release">
+<toolChain id="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.ReleaseToolchain.1358956319" name="TI Code Generation Tools" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.ReleaseToolchain" targetTool="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.linkerRelease.1933384812">
+<option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.299862941" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+<listOptionValue builtIn="false" value="DEVICE_CONFIGURATION_ID=TMS320C64XX.TMS320DM6437"/>
+<listOptionValue builtIn="false" value="DEVICE_ENDIANNESS=little"/>
+<listOptionValue builtIn="false" value="OUTPUT_FORMAT=COFF"/>
+<listOptionValue builtIn="false" value="CCS_MBS_VERSION=4.2.2"/>
+<listOptionValue builtIn="false" value="LINKER_COMMAND_FILE="/>
+<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=libc.a"/>
+<listOptionValue builtIn="false" value="DSPBIOS_VERSION=5.41.10.36"/>
+<listOptionValue builtIn="false" value="OUTPUT_TYPE=executable"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1469896188" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="7.2.0" valueType="string"/>
+<tool id="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.compilerRelease.1256959761" name="C6000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.compilerRelease">
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.DIAG_WARNING.1010627012" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.DIAG_WARNING" valueType="stringList">
+<listOptionValue builtIn="false" value="225"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.SILICON_VERSION.277112327" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.SILICON_VERSION" value="64+" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.INCLUDE_PATH.1795796225" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.INCLUDE_PATH" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${TCONF_OUTPUT_DIR}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${BIOS_INCLUDE_DIR}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${RTDX_INCLUDE_DIR}&quot;"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.ABI.565279636" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.ABI" value="com.ti.ccstudio.buildDefinitions.C6000_7.2.compilerID.ABI.coffabi" valueType="enumerated"/>
+</tool>
+<tool id="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.linkerRelease.1933384812" name="C6000 Linker" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.exe.linkerRelease">
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.STACK_SIZE.1991634737" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.STACK_SIZE" value="800" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.HEAP_SIZE.722122438" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.HEAP_SIZE" value="800" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.OUTPUT_FILE.1830219803" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.OUTPUT_FILE" value="&quot;TemplateVideoLoopback.out&quot;" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.MAP_FILE.393525773" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.MAP_FILE" value="&quot;TemplateVideoLoopback.map&quot;" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.LIBRARY.1392986284" superClass="com.ti.ccstudio.buildDefinitions.C6000_7.2.linkerID.LIBRARY"/>
+</tool>
+<tool id="com.ti.rtsc.buildDefinitions.DSPBIOS_5.40.tool.1788823010" name="TConf Script Compiler" superClass="com.ti.rtsc.buildDefinitions.DSPBIOS_5.40.tool"/>
+<macros/>
+</toolChain>
+</configuration>
+</project>
+</ManagedProjectBuildInfo>

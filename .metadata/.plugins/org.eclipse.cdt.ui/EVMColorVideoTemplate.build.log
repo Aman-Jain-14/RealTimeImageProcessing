@@ -1,0 +1,30 @@
+
+**** Build of configuration Debug for project EVMColorVideoTemplate ****
+
+"C:\\ti\\ccsv5\\utils\\bin\\gmake" -k all 
+'Building file: ../imageProcessing.c'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -Ooff -g --include_path="../../CommonLib" --include_path="C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --include_path="C:/dvsdk_1_01_00_15/examples/common/evmDM6437" --include_path="C:/CCStudio_v3.3/EVMDM6437/boards/evmdm6437_v2/include" --include_path="C:/dvsdk_1_01_00_15/psp_1_00_02_00/pspdrivers/soc/dm6437/dsp/inc" --include_path="C:/dvsdk_1_01_00_15/psp_1_00_02_00/pspdrivers/inc" --include_path="C:/Users/Aman/Desktop/CCS_AddOns/01-LABOS/02-Labs(Sotfware)/EVMColorVideoTemplate/Debug" --include_path="C:/ti/bios_5_42_01_09/packages/ti/bios/include" --include_path="C:/ti/bios_5_42_01_09/packages/ti/rtdx/include/c6000" --define=dm6437 --diag_warning=225 --opt_for_speed=5 --printf_support=full --preproc_with_compile --preproc_dependency="imageProcessing.pp"  "../imageProcessing.c"
+"../imageProcessing.c", line 253: error: expression must be a modifiable lvalue
+
+"../imageProcessing.c", line 255: error: a value of type "char *" cannot be assigned to an entity of type "char"
+"../imageProcessing.c", line 96: warning: variable "count" was declared but never referenced
+"../imageProcessing.c", line 96: warning: variable "sum" was declared but never referenced
+"../imageProcessing.c", line 96: warning: variable "q" was declared but never referenced
+"../imageProcessing.c", line 96: warning: variable "w" was declared but never referenced
+"../imageProcessing.c", line 96: warning: variable "sf" was declared but never referenced
+"../imageProcessing.c", line 96: warning: variable "min" was declared but never referenced
+>> Compilation failure
+"../imageProcessing.c", line 97: warning: variable "tem" was set but never used
+"../imageProcessing.c", line 97: warning: variable "countdown" was declared but never referenced
+"../imageProcessing.c", line 97: warning: variable "countup" was declared but never referenced
+"../imageProcessing.c", line 97: warning: variable "fi" was declared but never referenced
+"../imageProcessing.c", line 97: warning: variable "con" was declared but never referenced
+"../imageProcessing.c", line 97: warning: variable "ze" was declared but never referenced
+"../imageProcessing.c", line 97: warning: variable "flag" was declared but never referenced
+"../imageProcessing.c", line 660: warning: function declared implicitly
+2 errors detected in the compilation of "../imageProcessing.c".
+gmake: *** [imageProcessing.obj] Error 1
+gmake: Target `all' not remade because of errors.
+
+**** Build Finished ****

@@ -1,0 +1,158 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+CG_TOOL_ROOT := C:/ti/ccsv5/tools/compiler/c6000_7.4.4
+
+ORDERED_OBJS += \
+$(GEN_CMDS__FLAG) \
+"./ycbcr_to_y_cb_cr.obj" \
+"./y_cb_cr_to_ycbcr.obj" \
+"./video_loopback.obj" \
+"./tskcfg_c.obj" \
+"./tskcfg.obj" \
+"./imageProcessing.obj" \
+"./i2c_params.obj" \
+"./extractYCbCr.obj" \
+"./extractY.obj" \
+"./audio_params.obj" \
+-l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\palos_bios.lib" \
+-l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\i2c_bios_drv.lib" \
+-l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\mcasp_bios_drv.lib" \
+-l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\mcbsp_bios_drv.lib" \
+-l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\audio_bios_drv.lib" \
+-l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\edma3\lib\Debug\edma3_rm_bios.lib" \
+-l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\edma3\lib\Debug\edma3_drv_bios.lib" \
+-l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\edma3\lib\Debug\edma3_drv_sample.lib" \
+-l"C:\CCStudio_v3.3\EVMDM6437\boards\evmdm6437_v2\lib\evmdm6437bsl.lib" \
+-l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\prev_bios_drv.lib" \
+-l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\video_bios_drv.lib" \
+-l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\vpbe_bios_drv.lib" \
+-l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\vpfe_bios_drv.lib" \
+-l"C:\dvsdk_1_01_00_15\codec_engine_1_20_02\packages\ti\sdo\ce\osal\lib\osal_bios.a64P" \
+-l"libc.a" \
+
+-include ../makefile.init
+
+RM := DEL /F
+RMDIR := RMDIR /S/Q
+
+# All of the sources participating in the build are defined here
+-include sources.mk
+-include subdir_vars.mk
+-include subdir_rules.mk
+-include objects.mk
+
+ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(S_DEPS)),)
+-include $(S_DEPS)
+endif
+ifneq ($(strip $(S_UPPER_DEPS)),)
+-include $(S_UPPER_DEPS)
+endif
+ifneq ($(strip $(S62_DEPS)),)
+-include $(S62_DEPS)
+endif
+ifneq ($(strip $(C64_DEPS)),)
+-include $(C64_DEPS)
+endif
+ifneq ($(strip $(ASM_DEPS)),)
+-include $(ASM_DEPS)
+endif
+ifneq ($(strip $(CC_DEPS)),)
+-include $(CC_DEPS)
+endif
+ifneq ($(strip $(S55_DEPS)),)
+-include $(S55_DEPS)
+endif
+ifneq ($(strip $(C67_DEPS)),)
+-include $(C67_DEPS)
+endif
+ifneq ($(strip $(C??_DEPS)),)
+-include $(C??_DEPS)
+endif
+ifneq ($(strip $(CLA_DEPS)),)
+-include $(CLA_DEPS)
+endif
+ifneq ($(strip $(CPP_DEPS)),)
+-include $(CPP_DEPS)
+endif
+ifneq ($(strip $(S??_DEPS)),)
+-include $(S??_DEPS)
+endif
+ifneq ($(strip $(C_DEPS)),)
+-include $(C_DEPS)
+endif
+ifneq ($(strip $(C62_DEPS)),)
+-include $(C62_DEPS)
+endif
+ifneq ($(strip $(CXX_DEPS)),)
+-include $(CXX_DEPS)
+endif
+ifneq ($(strip $(C++_DEPS)),)
+-include $(C++_DEPS)
+endif
+ifneq ($(strip $(ASM_UPPER_DEPS)),)
+-include $(ASM_UPPER_DEPS)
+endif
+ifneq ($(strip $(K_DEPS)),)
+-include $(K_DEPS)
+endif
+ifneq ($(strip $(C43_DEPS)),)
+-include $(C43_DEPS)
+endif
+ifneq ($(strip $(S67_DEPS)),)
+-include $(S67_DEPS)
+endif
+ifneq ($(strip $(SA_DEPS)),)
+-include $(SA_DEPS)
+endif
+ifneq ($(strip $(S43_DEPS)),)
+-include $(S43_DEPS)
+endif
+ifneq ($(strip $(OPT_DEPS)),)
+-include $(OPT_DEPS)
+endif
+ifneq ($(strip $(S64_DEPS)),)
+-include $(S64_DEPS)
+endif
+ifneq ($(strip $(C_UPPER_DEPS)),)
+-include $(C_UPPER_DEPS)
+endif
+ifneq ($(strip $(C55_DEPS)),)
+-include $(C55_DEPS)
+endif
+endif
+
+-include ../makefile.defs
+
+# Add inputs and outputs from these tool invocations to the build variables 
+
+# All Target
+all: TemplateVideoLoopback.out
+
+# Tool invocations
+TemplateVideoLoopback.out: $(OBJS) $(GEN_CMDS)
+	@echo 'Building target: $@'
+	@echo 'Invoking: C6000 Linker'
+	"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -Ooff -g --define=dm6437 --diag_warning=225 --opt_for_speed=5 -z --stack_size=800 -m"TemplateVideoLoopback.map" --heap_size=800 -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/lib" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" -i"C:/ti/bios_5_42_01_09/packages/ti/rtdx/lib/c6000" -i"C:/ti/bios_5_42_01_09/packages/ti/bios/lib" --reread_libs --warn_sections --xml_link_info="TemplateVideoLoopback_linkInfo.xml" --rom_model -o "TemplateVideoLoopback.out" $(ORDERED_OBJS)
+	@echo 'Finished building target: $@'
+	@echo ' '
+
+# Other Targets
+clean:
+	-$(RM) $(GEN_HDRS__QUOTED)$(GEN_MISC_FILES__QUOTED)$(C6000_EXECUTABLE_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(GEN_CMDS__QUOTED) "TemplateVideoLoopback.out"
+	-$(RM) "audio_params.pp" "i2c_params.pp" "imageProcessing.pp" "tskcfg_c.pp" "video_loopback.pp" "ycbcr_to_y_cb_cr.pp" 
+	-$(RM) "tskcfg.pp" 
+	-$(RM) "audio_params.obj" "extractY.obj" "extractYCbCr.obj" "i2c_params.obj" "imageProcessing.obj" "tskcfg.obj" "tskcfg_c.obj" "video_loopback.obj" "y_cb_cr_to_ycbcr.obj" "ycbcr_to_y_cb_cr.obj" 
+	-$(RM) "extractY.pp" "extractYCbCr.pp" "y_cb_cr_to_ycbcr.pp" 
+	-@echo 'Finished clean'
+	-@echo ' '
+
+.PHONY: all clean dependents
+.SECONDARY:
+
+-include ../makefile.targets
+

@@ -1,0 +1,18 @@
+
+**** Build of configuration Debug for project EVMVideoTemplate ****
+
+"C:\\ti\\ccsv5\\utils\\bin\\gmake" -k all 
+'Building file: ../imageProcessing.c'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -O3 -g --include_path="C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" --include_path="../../CommonLib" --include_path="C:/dvsdk_1_01_00_15/examples/common/evmDM6437" --include_path="C:/CCStudio_v3.3/EVMDM6437/boards/evmdm6437_v2/include" --include_path="C:/dvsdk_1_01_00_15/psp_1_00_02_00/pspdrivers/soc/dm6437/dsp/inc" --include_path="C:/dvsdk_1_01_00_15/psp_1_00_02_00/pspdrivers/inc" --include_path="C:/Users/Aman/Desktop/CCS_AddOns/01-LABOS/02-Labs(Sotfware)/EVMVideoTemplate/Debug" --include_path="C:/ti/bios_5_42_01_09/packages/ti/bios/include" --include_path="C:/ti/bios_5_42_01_09/packages/ti/rtdx/include/c6000" --define=dm6437 --diag_warning=225 --opt_for_speed=5 --preproc_with_compile --preproc_dependency="imageProcessing.pp"  "../imageProcessing.c"
+"../imageProcessing.c", line 125: warning: function declared implicitly
+'Finished building: ../imageProcessing.c'
+' '
+'Building target: TemplateVideoLoopback.out'
+'Invoking: C6000 Linker'
+"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/bin/cl6x" -mv64+ --abi=coffabi -O3 -g --define=dm6437 --diag_warning=225 --opt_for_speed=5 -z --stack_size=800 -m"TemplateVideoLoopback.map" --heap_size=800 -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/lib" -i"C:/ti/ccsv5/tools/compiler/c6000_7.4.4/include" -i"C:/ti/bios_5_42_01_09/packages/ti/rtdx/lib/c6000" -i"C:/ti/bios_5_42_01_09/packages/ti/bios/lib" --reread_libs --warn_sections --xml_link_info="TemplateVideoLoopback_linkInfo.xml" --rom_model -o "TemplateVideoLoopback.out" -l"./tskcfg.cmd"  "./ycbcr_to_y_cb_cr.obj" "./y_cb_cr_to_ycbcr.obj" "./video_loopback.obj" "./tskcfg_c.obj" "./tskcfg.obj" "./imageProcessing.obj" "./i2c_params.obj" "./extractYCbCr.obj" "./extractY.obj" "./audio_params.obj" -l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\palos_bios.lib" -l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\i2c_bios_drv.lib" -l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\mcasp_bios_drv.lib" -l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\mcbsp_bios_drv.lib" -l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\audio_bios_drv.lib" -l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\edma3\lib\Debug\edma3_rm_bios.lib" -l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\edma3\lib\Debug\edma3_drv_bios.lib" -l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\edma3\lib\Debug\edma3_drv_sample.lib" -l"C:\CCStudio_v3.3\EVMDM6437\boards\evmdm6437_v2\lib\evmdm6437bsl.lib" -l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\prev_bios_drv.lib" -l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\video_bios_drv.lib" -l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\vpbe_bios_drv.lib" -l"C:\dvsdk_1_01_00_15\psp_1_00_02_00\pspdrivers\lib\DM6437\Debug\vpfe_bios_drv.lib" -l"C:\dvsdk_1_01_00_15\codec_engine_1_20_02\packages\ti\sdo\ce\osal\lib\osal_bios.a64P" -l"libc.a" 
+<Linking>
+'Finished building target: TemplateVideoLoopback.out'
+' '
+
+**** Build Finished ****
